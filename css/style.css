@@ -1,326 +1,105 @@
 
-:root
-{
-    --bg-black-100:#353535;
-    --bg-black-50:#eef0f4;
-    --bg-black-20:#414546;
-}
-
-
 *
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body
-{
-    overflow: auto;
-}
-body.dark 
-{
-    --bg-black-100:#fff;
-    --bg-black-50:#000;
-    --bg-black-20:#eef0f4;
-}
-.menu
-{
+
+.sidebar{
     position: fixed;
-    width: 5%;
-    height: 100%;
-    background-color: #00213D;
-    z-index: 2;
     top: 0;
-    bottom: 0;
-    margin: auto;
-    transition: 0.3s ease 0.15s;
-    font-family: sans-serif;
-}
-
-.menu .logoSpace
-{
-
-    position: relative;
-    top: 5px;
-    left: 7px;
-    width: 45px;
-    height: 45px;
-    background-color: aquamarine;
-    border-radius: 25px;
-}
-
-.menu .logoSpace img
-{
-    width: 100%;
+    left: 0;
+    background:#00213D;
     height: 100%;
+    width: 260px;
 }
-.menu.open
-{
-    width: 240px;
+
+.sidebar .logo-details{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #00113D;
+
+
 }
-.menu a 
-{
+
+.sidebar .logo-details img{
+    max-width: 70px;
+    margin: 10px;
+    background: blue;
+    border-radius: 100%;
+
+}
+
+.sidebar .logo-details .logo-name{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+}
+
+.sidebar .nav-links{
+    height: 100%;
+    padding-top: 30px;
+}
+
+.sidebar .nav-links li{
+    position: relative;]
+    list-style: none;
+}
+
+.sidebar .nav-links li i{
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.sidebar .nav-links li a{
     text-decoration: none;
-}
-.menu .actionbar
-{
-    width: 100%;
-    height: 10%;
-    padding: 0.5rem;
-    padding-top: 20px;
-    overflow: hidden;
-}
-.menu .actionbar div 
-{
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 0.5rem;
-    transition: 0.3s ease;
 }
-.menu .actionbar div button
-{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    width: 45px;
-    height: 45px;
-    transition: 0.3s ease;
-    font-size: 1rem;
-}
-.menu .actionbar div button:hover
-{
-    background-color: turquoise;
-}
-.menu .actionbar div h3
-{
-    width: calc(100% - 45px);
-    text-align: center;
-}
-.menu .optionsBar
-{
-    overflow: hidden;
-    display: flex;
-    width: 100%;
-    height: 60%;
-    padding: 0 0.5rem;
-    align-items: center;
-    flex-direction: column;
-}
-.menu .optionsBar .menuItem
-{
-    width: 100%;
-    height: 45px;
-    margin: 0.3rem;
-}
-.menu .optionsBar .menuItem .menuOption
-{
-    font-size: 1rem;
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0.5rem;
-    transition: 0.3s ease;
-}
-.menu .optionsBar .menuItem .menuOption:hover
-{
-    background-color: turquoise;
-}
-.menu .optionsBar .menuItem .menuOption i 
-{
-    width: 45px;
-    text-align: center;
+
+.sidebar .nav-links li a .link-name{
+    font-size: 18px;
+    font-weight: 400;
     color: white;
 }
-.menu .optionsBar .menuItem .menuOption h5
-{
-    width: calc(100% - 45px);
-}
-.menuText
-{
-    color: white;
-    transform: translateX(-250px);
-    opacity: 0;
-    transition: transform 0.3s ease 0.1s;
-}
-.menuText.open2
-{
-    opacity: 1;
-    transform: translateX(0);
-}
-.menu .menuBreak
-{
-    width: 100%;
-    height: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.menu .menuBreak hr
-{
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-}
-.menu .menuUser
-{
-    width: 100%;
-    height: 10px;
-    padding: 4.5rem 0 3rem 0;
-}
-.menu .menuUser a 
-{
-    width: 100%;
-    height: 100%;
+
+.sidebar .profile-details {
+    position: fixed;
+    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-decoration: none;
-    padding: 0.5rem;
-    position: relative;
+    background: #00113D;
+    padding: 10px 8;
+
+
 }
-.menu .menuUser a div 
-{
-    width: 45px;
-    height: 45px;
-    position: relative;
-    border-radius: 0.5rem;
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
 }
-.menu .menuUser a div img 
-{
-    width: 100%;
-    height: 100%;
+
+.sidebar .profile-details img{
+    height: 52px;
+    width: 52px;
     object-fit: cover;
-    border-radius: 0.5rem;
+    border-radius: 16px;
+    margin: 0 14px 0 12px;
+    background: #00135D;
+    padding: 5px;
 }
-.menu .menuUser a .Username
-{
-    width: calc(70% - 45px);
-}
-.menu .menuUser a p
-{
-    width: calc(30% - 45px);
-}
-.menu .menuUser a:hover p
-{
-    animation: animArrow 0.3s ease 2;
-}
-@keyframes animArrow
-{
-    0%
-    {
-        transform: translateX(0);
-    }
-    50%
-    {
-        transform: translateX(5px);
-    }
-    100%
-    {
-        transform: translateX(0);
-    }
-}
-.menu .menuUser .userInfo
-{
-    position: absolute;
-    width: 10rem;
-    height: 8rem;
-    opacity: 0;
-    color: var(--bg-black-50);
-    pointer-events: none;
-    top: 58%;
-    left: 1.5rem;
-    transition: 0.3s ease;
-    transform: scale(0);
-    transform-origin: bottom left;
-}
-.menu .menuUser .userInfo div 
-{
-    position: relative;
-    width: 100%;
-    height: calc(100% - 20px);
-    box-shadow: 0px 0px 40px rgba(0,0,0,0.3);
-    background-color: var(--bg-black-100);
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-}
-.menu .menuUser .userInfo div h1
-{
-    font-size: 4rem;
-}
-.menu .menuUser .userInfo div::before
-{
-    content: '';
-    position: absolute;
-    bottom: -18px;
-    left: -2px;
-    width: 0;
-    height: 0;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-right: 15px solid var(--bg-black-100);
-    transform: rotate(45deg);
-}
-.menu .menuUser:hover .userInfo
-{
-    pointer-events: all;
-    opacity: 1;
-    transform: scale(1);
-}
-.menu .themeBar
-{
-    overflow: hidden;
-    width: 100%;
-    height: 10%;
-    padding: 0.5rem;
-}
-.menu .themeBar div 
-{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0.5rem;
-    transition: 0.3s ease;
-}
-.menu .themeBar div button
-{
-    background-color: transparent;
-    outline: none;
-    border: none;
-    border-radius: 0.5rem;
-    color: var(--bg-black-100);
-    width: 100%;
-    height: 45px;
-    transition: 0.3s ease;
-    font-size: 1rem;
-}
-.menu .themeBar div button
-{
-    background-color: rgb(132,0,255);
-}
-.menu .optionsBar .menuItem .menuOption:hover .menuText,
-.menu .optionsBar .menuItem .menuOption:hover i,
-.menu .actionbar div button:hover i,
-.menu .themeBar div button:hover i
-{
-    color: #fff;
+
+.sidebar .profile-details .profile-name{
+    color: white;
+    font-size: 11px;
+    font-weight: 500px;
 }
