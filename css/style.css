@@ -27,9 +27,6 @@
 
 .sidebar .logo-details img{
     max-width: 70px;
-    margin: 10px;
-    background: blue;
-    border-radius: 100%;
 
 }
 
@@ -37,6 +34,7 @@
     font-size: 22px;
     color: white;
     font-weight: 600;
+    padding-left: 7px;
 }
 
 .sidebar .nav-links{
@@ -45,7 +43,7 @@
 }
 
 .sidebar .nav-links li{
-    position: relative;]
+    position: relative;
     list-style: none;
 }
 
@@ -57,6 +55,16 @@
     color: white;
     font-size: 20px;
 
+}
+
+.sidebar .nav-links .selected{
+    background: lightblue;
+
+
+}
+
+.sidebar .nav-links li:hover{
+    background: lightblue;
 }
 
 .sidebar .nav-links li a{
@@ -138,8 +146,13 @@
     display: none;
 }
 
-.sidebar.close .profile-details {
+.sidebar.close .profile-details .name,
+.sidebar.close .profile-details a{
     display: none;
+}
+
+.sidebar.close .profile-details{
+        padding: 10px 0;
 }
 
 .sidebar.close .nav-links li i{
