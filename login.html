@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>EcoWash</title>
+</head>
+<body>
+
+
+    <div class="banner">
+        <header class="page-header">
+            <h1>ECOWASH.</h1>
+
+            <div class="nav-btn">
+                <button class="btn" id="login-btn">Iniciar Sessão</button>
+                <button class="btn" id="signup-btn">Cadastrar-se</button>
+            </div>
+        </header>
+        <video autoplay muted loop>
+
+            <source src="./videos/underlightsea.mp4"  type="video/mp4" />
+
+        </video>
+
+        <!-- Box do Login-->
+        <div class="login-container">
+            <div class="box-login">
+                
+                <h1>Iniciar sessão</h1>
+                <div class="input-field">
+                    <div class="label-input">
+                        <input type="text" class="input" placeholder="Usuário" id="text" required>
+                    </div>
+                    <i class="bx bxs-user"></i>
+                </div>
+                <div class="input-field">
+                    <div class="label-input">
+                        <input type="password" class="input" placeholder="Senha" id="password" required>
+                    </div>
+                    <i class="bx bxs-lock-alt"></i>
+                </div>
+                <div id="mensage-error"></div>
+                <div class="two-col">
+                    <div class="one">
+                    <input type="checkbox" name="" id="check">
+                    <label for="check">Lembre-me</label>
+                    </div>
+                    <div class="two">
+                        <label>Esqueceu a senha? <a href="#">Clique aqui</a></label>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <button class="loginbtn">Iniciar sessão</button>
+                </div>     
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

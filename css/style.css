@@ -7,6 +7,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Estrutura de construção da sidebar*/
+
 .sidebar{
     position: fixed;
     top: 0;
@@ -27,9 +29,6 @@
 
 .sidebar .logo-details img{
     max-width: 70px;
-    margin: 10px;
-    background: blue;
-    border-radius: 100%;
 
 }
 
@@ -37,6 +36,7 @@
     font-size: 22px;
     color: white;
     font-weight: 600;
+    padding-left: 7px;
 }
 
 .sidebar .nav-links{
@@ -45,7 +45,7 @@
 }
 
 .sidebar .nav-links li{
-    position: relative;]
+    position: relative;
     list-style: none;
 }
 
@@ -57,6 +57,16 @@
     color: white;
     font-size: 20px;
 
+}
+
+.sidebar .nav-links .selected{
+    background: lightblue;
+
+
+}
+
+.sidebar .nav-links li:hover{
+    background: lightblue;
 }
 
 .sidebar .nav-links li a{
@@ -83,6 +93,7 @@
 
 }
 
+
 .sidebar .profile-details .profile-content{
     display: flex;
     align-items: center;
@@ -103,3 +114,239 @@
     font-size: 11px;
     font-weight: 500px;
 }
+
+    /* Botão de ação da sidebar*/
+
+.home-section{
+    position: relative;
+    background: #00135D;
+    float: right;
+    border-radius: 90%;
+    transition: all 0.5 ease;
+
+}
+
+.home-section .home-content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+.home-section .home-content .bx-menu{
+    color: white;
+    font-size: 35px;
+    padding: 10px;
+}
+
+    /* Abrir/fechar sidebar */
+
+.sidebar.close {
+    width: 78px;
+    transition: width 0.5s ease;
+}
+
+.sidebar.close .nav-links li .link-name{
+    display: none;
+}
+
+.sidebar.close .profile-details .name,
+.sidebar.close .profile-details a{
+    display: none;
+}
+
+.sidebar.close .profile-details{
+        padding: 10px 0;
+}
+
+.sidebar.close .nav-links li i{
+    min-width: 78px;
+}
+
+.sidebar.close .logo-details .logo-name {
+    display: none;
+}
+
+/* Login */
+
+.banner .page-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 1;
+    background-color: transparent;
+    color: white;
+}
+
+.banner .page-header h1 {
+    position: absolute;
+    left: 0;
+    padding: 60px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.banner .page-header .nav-btn {
+    position: absolute;
+    right: 0;
+    padding: 60px;
+}
+
+.banner .page-header .nav-btn .btn {
+    width: 130px;
+    height: 40px;
+    margin-right: 15px;
+    background-color: rgba(9, 159, 218, 0.5);
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: ease 300ms;
+}
+
+.banner .page-header .nav-btn .btn:hover {
+    background:rgba(9, 159, 218, 0.3) ;
+}
+
+#login-btn {
+    background: rgba(9, 159, 218, 0.7);
+}
+
+#login-btn:hover {
+    background: rgba(9, 159, 218, 0.3);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    min-height: 80vh;
+    align-items: center;
+    z-index: 1;
+    padding: 20px;
+    margin-top: 80px;
+    text-align: center;
+    background: rgba(0, 19, 93, 0.5);
+    border-radius: 25px;
+}
+
+.box-login{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px 0 15px;
+    
+}
+
+.login-container .box-login h1 {
+    font-size: 45px;
+    color: white;
+}
+
+span{
+    color: #fff;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0 10px 0;
+}
+
+.input-field{
+    margin-top: 18px;
+    border-radius: 10px;
+}
+
+.input-field .input{
+    height: 45px;
+    width: 87%;
+    border: 2px solid aqua;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    padding: 20px 50px 20px 20px;
+    background: rgba(0, 255, 255,0.5);
+    outline: none;
+}
+
+.input-field .loginbtn{
+    height: 45px;
+    width: 87%;
+    border: 2px solid aqua;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 0;
+    padding: 20px 15px;
+    background: #00135D;
+    outline: none;
+    transition: ease-in 300ms;
+}
+
+.input-field i{
+    color: #fff;
+    position: relative;
+    right: -100px;
+    top: -33px;
+    
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+
+.loginbtn:hover{
+    background: aqua;
+    color:#00135D;
+}
+.two-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 13px;
+
+}
+
+.two-col .one #check {
+    width: 15px;
+}
+
+.two-col .one label {
+    padding-left: 10px;
+}
+
+.one{
+    display: flex;
+}
+
+label a{
+    text-decoration: underline;
+    color: #ffff;
+}
+
+    /*Fundo do site*/
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(0.5);
+}
+
+ 
