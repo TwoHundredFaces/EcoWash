@@ -1,4 +1,4 @@
-#Projeto EcoWash
+EcoWash
 
 Projeto exclusivamente escolar de e-commerce sustentável de venda de sabão caseira e troca de óleo usado.
 
