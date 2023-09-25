@@ -1,19 +1,13 @@
-document.getElementById("imagem").innerHTML = "<img src='imgs/logo.png'>";
-document.getElementById("perfil").innerHTML = "<img src='imgs/Emerson.jpg'>";
+const signInBtnLink = document.querySelector(".signInBtn-link");
+const signUpBtnLink = document.querySelector(".signUpBtn-link");
+const wrapper = document.querySelector(".wrapper");
 
-<<<<<<< HEAD
-let sidebar = document.querySelector('.sidebar');
-let sidebarBtn = document.querySelector('.bx-menu');
+// Aciona o evento animado no CSS do wrapper
 
-=======
-// Criação das variáveis da sidebar e do botão abrir/fechar
+signUpBtnLink.addEventListener("click", () => {
+  wrapper.classList.toggle("active");
+});
 
-let sidebar = document.querySelector('.sidebar');
-let sidebarBtn = document.querySelector('.bx-menu');
-
-// Aplicação da ação de abrir e fechar da sidebar
->>>>>>> 6e1458e6eec72bde307a0fd7eb9bab11342f6eac
-
-sidebarBtn.addEventListener('click', () =>{
-    sidebar.classList.toggle('close')
-} );
+signInBtnLink.addEventListener("click", () => {
+  wrapper.classList.toggle("active");
+});

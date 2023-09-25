@@ -17,11 +17,6 @@
     <div class="banner">
         <header class="page-header">
             <h1>ECOWASH.</h1>
-
-            <div class="nav-btn">
-                <button class="btn" id="login-btn">Iniciar Sessão</button>
-                <button class="btn" id="signup-btn">Cadastrar-se</button>
-            </div>
         </header>
         <video autoplay muted loop>
 
@@ -29,36 +24,54 @@
 
         </video>
 
-        <!-- Box do Login-->
-        <div class="login-container">
-            <div class="box-login">
-                
-                <h1>Iniciar sessão</h1>
-                <div class="input-field">
-                    <div class="label-input">
-                        <input type="text" class="input" placeholder="Usuário" id="text" required>
+            <!-- Box do Login -->
+        <div class="wrapper">
+            <div class="form-wrapper sign-in">
+                <form>
+                    <h2>Iniciar sessão</h2>
+
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Usuário</label>
                     </div>
-                    <i class="bx bxs-user"></i>
-                </div>
-                <div class="input-field">
-                    <div class="label-input">
-                        <input type="password" class="input" placeholder="Senha" id="password" required>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label>Senha</label>
                     </div>
-                    <i class="bx bxs-lock-alt"></i>
-                </div>
-                <div id="mensage-error"></div>
-                <div class="two-col">
-                    <div class="one">
-                    <input type="checkbox" name="" id="check">
-                    <label for="check">Lembre-me</label>
+                    <div class="remember">
+                        <label><input type="checkbox">  Lembrar-se</label>
                     </div>
-                    <div class="two">
-                        <label>Esqueceu a senha? <a href="#">Clique aqui</a></label>
+                    <button type="submit">Iniciar sessão</button>
+                    <div class="signUp-link">
+                        <p>Não possui uma conta? <a href="#" class="signUpBtn-link">Cadastre-se</a></p>
                     </div>
-                </div>
-                <div class="input-field">
-                    <button class="loginbtn">Iniciar sessão</button>
-                </div>     
+                </form>
+            </div>
+
+            <div class="form-wrapper sign-up">
+                <form>
+                    <h2>Cadastrar-se</h2>
+
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Usuário</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="remember">
+                        <label><input type="checkbox">  Eu concordo com os termos e condições</label>
+                    </div>
+                    <button type="submit">Cadastrar</button>
+                    <div class="signUp-link">
+                        <p>Já possui uma conta? <a href="#" class="signInBtn-link">Iniciar sessão</a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
