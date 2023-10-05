@@ -11,3 +11,14 @@ signUpBtnLink.addEventListener("click", () => {
 signInBtnLink.addEventListener("click", () => {
   wrapper.classList.toggle("active");
 });
+
+// pagina equipe 
+
+const members = document.querySelectorAll('.member');
+
+members.forEach(member => {
+  member.addEventListener('click', () => {
+    const details = member.querySelector('.member-details');
+    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+  });
+});
