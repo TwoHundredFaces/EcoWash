@@ -11,3 +11,21 @@ signUpBtnLink.addEventListener("click", () => {
 signInBtnLink.addEventListener("click", () => {
   wrapper.classList.toggle("active");
 });
+
+// Slider
+
+let slides = document.querySelectorAll('.slide');
+let btns = document.querySelectorAll('.btn');
+let currentSlide = 1;
+
+let manualNav = function (manual) {
+    slides[manual].classList.add('active');
+    btns[manual].classList.add('active');
+}
+
+btns.forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+    });
+});
