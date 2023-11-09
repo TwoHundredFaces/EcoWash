@@ -13,28 +13,63 @@ signInBtnLink.addEventListener("click", () => {
 });
 
 // Slider
+let slides = document.querySelectorAll(".slide");
 
-let slides = document.querySelectorAll('.slide');
-let btns = document.querySelectorAll('.btn');
-let currentSlide = 1;
+slides = Array.from(slides).filter((slide) => slide.innerHTML.trim() !== "");
+
+let btns = document.querySelectorAll(".btn");
+let currentSlide = 0;
 
 let manualNav = function (manual) {
-    slides[manual].classList.add('active');
-    btns[manual].classList.add('active');
-}
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  btns.forEach((btn) => {
+    btn.classList.remove("active");
+  });
+
+  slides[manual].classList.add("active");
+  btns[manual].classList.add("active");
+  currentSlide = manual;
+};
 
 btns.forEach((btn, i) => {
-    btn.addEventListener("click", () => {
-        manualNav(i);
-        currentSlide = i;
-    });
-// pagina equipe 
-
-const members = document.querySelectorAll('.member');
-
-members.forEach(member => {
-  member.addEventListener('click', () => {
-    const details = member.querySelector('.member-details');
-    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+  btn.addEventListener("click", () => {
+    manualNav(i);
   });
 });
+
+let repeat = function () {
+  setInterval(function () {
+    slides.forEach((slide) => {
+      slide.classList.remove("active");
+    });
+
+    btns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+    btns[currentSlide].classList.add("active");
+  }, 1999);
+};
+repeat();
+
+
+// pagina equipe 
+
+// const members = document.querySelectorAll('.member');
+
+// members.forEach(member => {
+//   member.addEventListener('click', () => {
+//     const details = member.querySelector('.member-details');
+//     details.style.display = details.style.display === 'block' ? 'none' : 'block';
+//   });
+// });
