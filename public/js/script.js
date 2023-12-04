@@ -1,17 +1,3 @@
-const signInBtnLink = document.querySelector(".signInBtn-link");
-const signUpBtnLink = document.querySelector(".signUpBtn-link");
-const wrapper = document.querySelector(".wrapper");
-
-// Aciona o evento animado no CSS do wrapper
-
-signUpBtnLink.addEventListener("click", () => {
-  wrapper.classList.toggle("active");
-});
-
-signInBtnLink.addEventListener("click", () => {
-  wrapper.classList.toggle("active");
-});
-
 // Slider
 let slides = document.querySelectorAll(".slide");
 
@@ -40,36 +26,30 @@ btns.forEach((btn, i) => {
   });
 });
 
-let repeat = function () {
-  setInterval(function () {
+slides[currentSlide].classList.add("active");
+btns[currentSlide].classList.add("active");
+
+let autoNav = function () {
     slides.forEach((slide) => {
-      slide.classList.remove("active");
+        slide.classList.remove("active");
     });
 
     btns.forEach((btn) => {
-      btn.classList.remove("active");
+        btn.classList.remove("active");
     });
 
     currentSlide++;
 
     if (currentSlide >= slides.length) {
-      currentSlide = 0;
+        currentSlide = 0;
     }
 
     slides[currentSlide].classList.add("active");
     btns[currentSlide].classList.add("active");
-  }, 1999);
 };
-repeat();
 
+// Adicione a chamada da função autoNav() para iniciar o slideshow
+autoNav();
 
-// pagina equipe 
-
-// const members = document.querySelectorAll('.member');
-
-// members.forEach(member => {
-//   member.addEventListener('click', () => {
-//     const details = member.querySelector('.member-details');
-//     details.style.display = details.style.display === 'block' ? 'none' : 'block';
-//   });
-// });
+// Ative a navegação automática
+setInterval(autoNav, 2000); // Altere o intervalo conforme necessário

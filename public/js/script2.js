@@ -8,6 +8,10 @@ let sidebarBtn = document.querySelector('.bx-menu');
 
 // Aplicação da ação de abrir e fechar da sidebar
 
+document.addEventListener("DOMContentLoaded", function () {
+    sidebar.classList.add("close");
+});
+
 sidebarBtn.addEventListener('click', () =>{
     sidebar.classList.toggle('close')
 });
