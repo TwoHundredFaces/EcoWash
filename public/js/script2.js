@@ -1,5 +1,5 @@
-document.getElementById("imagem").innerHTML = "<img src='imgs/logo.png'>";
-document.getElementById("perfil").innerHTML = "<img src='imgs/Emerson.jpg'>";
+document.getElementById("imagem").innerHTML = "<img src='../imgs/logo.png'>";
+document.getElementById("perfil").innerHTML = "<img src='../imgs/Emerson.jpg'>";
 
 // Criação das variáveis da sidebar e do botão abrir/fechar
 
