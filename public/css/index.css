@@ -1,0 +1,241 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #CFFFFF;
+}
+
+/* Estrutura de construção da sidebar*/
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#00213D;
+    height: 100%;
+    width: 260px;
+    z-index: 99999;
+}
+
+.sidebar .logo-details{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #00113D;
+
+
+}
+
+.sidebar .logo-details img{
+    max-width: 70px;
+
+}
+
+.sidebar .logo-details .logo-name{
+    font-size: 22px;
+    color: white;
+    font-weight: 600;
+    padding-left: 7px;
+}
+
+.sidebar .nav-links{
+    height: 100%;
+    padding-top: 30px;
+}
+
+.sidebar .nav-links li{
+    position: relative;
+    list-style: none;
+}
+
+.sidebar .nav-links li i{
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+
+}
+
+.sidebar .nav-links .selected{
+    background: lightblue;
+
+
+}
+
+.sidebar .nav-links li:hover{
+    background: lightblue;
+}
+
+.sidebar .nav-links li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .nav-links li a .link-name{
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+}
+
+.sidebar .profile-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #00113D;
+    padding: 10px 8;
+
+
+}
+
+
+.sidebar .profile-details .profile-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .profile-details img{
+    position: relative;
+    height: 52px;
+    width: 52px;
+    object-fit: cover;
+    top: 5px;
+    left: 12px;
+    border-radius: 16px;
+    background: #00135D;
+    padding: 5px;
+}
+
+.sidebar .profile-details .profile-name{
+    color: white;
+    font-size: 15px;
+    font-weight: 500px;
+}
+
+.sidebar .profile-details a i {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    right: 10px;
+}
+
+    /* Botão de ação da sidebar*/
+
+.home-section{
+    position: relative;
+    background: #00135D;
+    float: right;
+    border-radius: 90%;
+    transition: all 0.5 ease;
+    z-index: 9999;
+
+}
+
+.home-section .home-content{
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+.home-section .home-content .bx-menu{
+    color: white;
+    font-size: 35px;
+    padding: 10px;
+}
+
+    /* Abrir/fechar sidebar */
+
+.sidebar.close {
+    width: 78px;
+    transition: width 0.5s ease;
+}
+
+.sidebar.close .nav-links li .link-name{
+    display: none;
+}
+
+.sidebar.close .profile-details .name,
+.sidebar.close .profile-details a{
+    display: none;
+}
+
+.sidebar.close .profile-details{
+        padding: 10px 0;
+}
+
+.sidebar.close .nav-links li i{
+    min-width: 78px;
+}
+
+.sidebar.close .logo-details .logo-name {
+    display: none;
+}
+/* Image slider */
+
+main .img-slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+
+main .img-slider .slide {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    left: 0; /* Inicialmente, todos os slides à esquerda */
+    opacity: 0; /* Inicialmente, configure a opacidade para 0 */
+    transition: opacity 2s ease, left 2s ease; /* Adicione transição para opacidade e posição */
+}
+
+
+main .img-slider .slide img {
+    z-index: 1;
+    width: 100%;
+    height: 900px;
+    border-radius: 5px;
+}
+
+main .img-slider .slide.active {
+    left: 0;
+    opacity: 1;
+}
+
+main .img-slider .navigation {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    bottom: -400px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+main .img-slider .navigation .btn {
+    background: #00113D;
+    width: 12px;
+    height: 12px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+main .img-slider .navigation .btn.active {
+    background: white;
+}
