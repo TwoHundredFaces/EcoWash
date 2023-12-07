@@ -41,7 +41,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="projeto.html">
                     <i class='bx bxs-search-alt-2'></i>
                     <span class="link-name">Projeto</span>
                 </a>
@@ -81,16 +81,25 @@
             margin: 20px;
         }
 
+        .produtos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Espaçamento entre os produtos */
+        }
+        
         .produto {
+            margin-left: 125px;
             border: 1px solid #ccc;
             padding: 10px;
-            margin-bottom: 20px;
             text-align: center;
+            /* Cada produto ocupará o mesmo espaço */
+            max-width: 300px;
+            /* Largura máxima para evitar que ocupem a tela inteira */
         }
 
         .produto img {
             max-width: 100%;
-            height: auto;
             margin-bottom: 10px;
         }
 
@@ -99,34 +108,82 @@
             height: 100%;
             object-fit: cover;
         }
+
+        footer {
+            background-color: #add8e6;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+        }
     </style>
     </head>
 
     <body>
 
-        <div class="produto">
-            <img src="../imgs/sabao-loja.png" alt="">
-            <h2>Produto 1</h2>
-            <p>Descrição do Produto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Preço: R$ 99,99</p>
-            <button>Adicionar ao Carrinho</button>
-        </div>
+        <div class="produtos-container">
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 1</h2>
+                <p>Descrição do Produto 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 99,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
 
-        <div class="produto">
-            <img src="../imgs/sabao-loja.png" alt="">
-            <h2>Produto 2</h2>
-            <p>Descrição do Produto 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Preço: R$ 49,99</p>
-            <button>Adicionar ao Carrinho</button>
-        </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 2</h2>
+                <p>Descrição do Produto 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 49,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
 
-        <div class="produto">
-            <img src="../imgs/sabao-loja.png" alt="">
-            <h2>Produto 3</h2>
-            <p>Descrição do Produto 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <p>Preço: R$ 79,99</p>
-            <button>Adicionar ao Carrinho</button>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 3</h2>
+                <p>Descrição do Produto 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 4</h2>
+                <p>Descrição do Produto 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 5</h2>
+                <p>Descrição do Produto 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 6</h2>
+                <p>Descrição do Produto 6. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 7</h2>
+                <p>Descrição do Produto 7. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto">
+                <img src="../imgs/sabao-loja.png" alt="">
+                <h2>Produto 8</h2>
+                <p>Descrição do Produto 8. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Preço: R$ 79,99</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
         </div>
+        <footer>
+            <p>&copy; 2023</p>
+        </footer>
 
 
         <script src="./js/script2.js"></script>
